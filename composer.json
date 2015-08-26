@@ -1,7 +1,9 @@
 {
     "name": "aviogram/common",
     "description": "Common library for Aviogram packages",
-    "require": {},
+    "require": {
+        "php" : ">=5.4"
+    },
     "license": "MIT",
     "authors": [
         {

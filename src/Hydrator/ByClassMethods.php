@@ -32,8 +32,7 @@ class ByClassMethods
      * @param object $object
      * @param array | ArrayIterator $data
      * @param boolean $recursive
-     * @param array $remainder Contains the unhydrated values from data not
-     * added to the target object
+     * @param array $remainder Contains the unhydrated values from data not added to the target object
      *
      * @return object
      * @throws Exception\HydrateFailed When $object is no object or $data is not array
@@ -41,7 +40,7 @@ class ByClassMethods
     public function hydrate(
         $object,
         $data,
-        $recursive = true,
+        $recursive  = true,
         &$remainder = array()
     ) {
         // Object should be an object. Duh makes sense ;)

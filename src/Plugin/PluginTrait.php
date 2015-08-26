@@ -1,9 +1,6 @@
 <?php
 namespace Aviogram\Common\Plugin;
 
-use Closure;
-use ReflectionClass;
-
 trait PluginTrait
 {
     /**
@@ -46,7 +43,7 @@ trait PluginTrait
      *
      * @return object
      */
-    protected function getPlugin($name, Closure $constructClosure = null)
+    protected function getPlugin($name, callable $constructClosure = null)
     {
         static $cache = array();
 
@@ -75,7 +72,7 @@ trait PluginTrait
         $object = $constructClosure($class);
         if (is_object($object) === false) {
             throw new Exception\PluginNotCreated(
-                'Plugin with name `{$name}` could not be created, because closure did not return an object.'
+                "Plugin with name `{$name}` could not be created, because callable did not return an object."
             );
         }
 

@@ -1,5 +1,5 @@
 <?php
 namespace Aviogram\Common\Hydrator\Exception;
 
-class ConfigFailed extends \RuntimeException
+class ConfigFailed extends BaseException
 {}
